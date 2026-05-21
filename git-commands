@@ -1,0 +1,9 @@
+Step 1: git clone https://git.
+Enter git uid: arasans
+Enter: token < copy from settings-> developer settings->personal access tokens->token classic->Generate new token -> select option-> repo -> copy the token-> paste on terminal-> enter
+
+Step 2:  If you already downloaded, update the latest code
+git pull origin main
+From https://git.fff.com/xx/uuuu
+ * branch              main       -> FETCH_HEAD
+Already up to date.
