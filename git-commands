@@ -8,10 +8,18 @@ From https://git.fff.com/xx/uuuu
  * branch              main       -> FETCH_HEAD
 Already up to date.
 
-step 3: to go to the branch
+step 3: to go to the branch. 
+#this is to fetch all the remote branches.
 git fetch origin
-git checkout <branch link from the PR>
+#get the latest code
+git pull origin
+#again
+git fetch origin
+# switch to branch
+git checkout <UAP 3002 branch link from the PR>
+
+#If the PR is already merged, branch will be deleted.
 
 step 4: claude
-review my branch, i am doing the PR review
+review this branch, i am doing the PR review
 claude should review this branch
