@@ -23,3 +23,38 @@ git checkout <UAP 3002 branch link from the PR>
 step 4: claude
 review this branch, i am doing the PR review
 claude should review this branch
+
+
+
+
+
+Option 3: Use a personal access token (HTTPS)
+
+Go to GitHub → Settings → Developer settings → Personal access tokens
+Generate a token with repo scope
+Then run:
+git push -u origin main
+
+
+
+
+
+
+
+
+
+…or create a new repository on the command line
+echo "# learning-june2026" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/SreenivasaArasanagatta/learning-june2026.git
+git push -u origin main
+
+
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/SreenivasaArasanagatta/learning-june2026.git
+git branch -M main
+git push -u origin main
