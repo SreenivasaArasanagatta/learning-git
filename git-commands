@@ -35,7 +35,9 @@ Generate a token with repo scope
 Then run:
 git push -u origin main
 
+LLM command: can you push this project to my github @https://github.com/SreenivasaArasanagatta/learning-june2026.git
 
+Ex:git push -U origin main  SreenivasaArasanagatta <token>
 
 
 
