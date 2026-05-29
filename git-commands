@@ -60,3 +60,51 @@ git push -u origin main
 git remote add origin https://github.com/SreenivasaArasanagatta/learning-june2026.git
 git branch -M main
 git push -u origin main
+
+
+
+
+
+
+
+---
+description: Deploy project to GitHub repository
+alwaysApply: true
+---
+
+# Deploy to GitHub
+
+When the user asks to deploy, push, or publish to GitHub, follow this workflow:
+
+## Repository
+
+- Remote: `https://github.com/SreenivasaArasanagatta/learning-june2026.git`
+- Default branch: `main`
+
+## Deployment Steps
+
+1. Stage all changes: `git add -A`
+2. Check status with `git status` to confirm what will be committed
+3. Commit with a clear, descriptive message summarizing the changes
+4. Push to remote: `git push origin main`
+
+## Authentication
+
+Use GitHub CLI (`gh`) for authentication:
+
+```bash
+gh auth status
+```
+
+If not authenticated, prompt the user to run `gh auth login` interactively.
+
+## Rules
+
+- Never hardcode tokens or credentials in commands or files
+- Always review staged changes before committing
+- Use meaningful commit messages (not generic "update" messages)
+- If the remote repo doesn't exist yet, create it with: `gh repo create SreenivasaArasanagatta/learning-june2026 --public --source=. --push`
+- Do not force push unless explicitly asked
+- Warn before pushing large binary files (>10MB)
+
+
