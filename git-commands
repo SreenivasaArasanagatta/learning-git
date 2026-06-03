@@ -7,6 +7,16 @@ git pull origin main
 From https://git.fff.com/xx/uuuu
  * branch              main       -> FETCH_HEAD
 Already up to date.
+git pull --rebase origin main 
+
+(replays your commits on top of remote)
+Rebase (--rebase)
+Takes your local commits, temporarily removes them, pulls in the remote commits, then replays your commits on top as if you wrote them after the remote changes:
+
+D---E---F---G---H---I---A'---B'---C'  (your commits re-applied on top)
+Pros: Clean, linear history — easier to read.
+Cons: Rewrites your local commit hashes (A becomes A', etc.). This is fine for unpushed commits, but can cause issues if you've already pushed them.
+
 
 step 3: to go to the branch. 
 #this is to fetch all the remote branches.
