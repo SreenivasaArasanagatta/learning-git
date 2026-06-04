@@ -1,1 +1,7 @@
+#creates a local project based on the link provided
+%git clone https://github.com/SreenivasaArasanagatta/test.git 
 
+#displays a link to the remote repository
+% git remote -v
+origin	https://github.com/SreenivasaArasanagatta/test.git (fetch)
+origin	https://github.com/SreenivasaArasanagatta/test.git (push)
