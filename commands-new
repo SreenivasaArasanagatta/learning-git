@@ -4,3 +4,10 @@ origin	https://git.xx.com/ADP/yy.git (fetch) # fetch get the latest changes from
 origin	https://git.xx.com/ADP/yy.git (push)  # send from local to remote repository
 
 git clone <link> #creates a local project based on the link provided
+
+git <command> -h
+
+git clone -h
+git remote -h
+
+
