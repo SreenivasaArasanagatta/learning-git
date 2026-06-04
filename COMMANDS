@@ -24,6 +24,25 @@ origin	https://github.com/SreenivasaArasanagatta/test.git (push)
  create mode 100644 test.txt
 #gives overview of commits
 %git log
+*******************
+#STAGING
+% echo staged > stagedfile.txt
+% echo unstaged >unstagedfile.txt
+% git add stagedfile.txt
+% git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   stagedfile.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	unstagedfile.txt
+
+arasans@ADSKLYY0JW6Q42 test % 
 
 
 
