@@ -5,3 +5,25 @@
 % git remote -v
 origin	https://github.com/SreenivasaArasanagatta/test.git (fetch)
 origin	https://github.com/SreenivasaArasanagatta/test.git (push)
+*******************
+#HELP commands
+%git <command> - h
+%git clone -h
+%git remote -h
+*******************
+#COMMIT -> each commit has a hash key
+#create a file
+%echo Hello > test.txt
+
+#adds all the file changes to the staging area
+% git add .
+#allows us to creates a commit
+% git commit -m "Initial commit"
+[main dbbfa49] Initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test.txt
+#gives overview of commits
+%git log
+
+
+
