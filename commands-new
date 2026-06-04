@@ -48,4 +48,19 @@ arasans@ADSKLYY0JW6Q42 learning-git % git show --name-only 3b169e403605911adec3c
 
 arasans@ADSKLYY0JW6Q42 learning-git % git reflog   #gives info about all commits on all branches
 
+*********************************************
+git revert  # creates a new commit to undo changes
+git reset --soft  # removes commits from history keeps changes
+gut reset -- heard #removes commits from history removes changes
+
+***************************************************
+git merge featurebranch
+arasans@ADSKLYY0JW6Q42 learning-git % git merge featurebranch
+Merge made by the 'ort' strategy.
+ newfeaturebranch.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 newfeaturebranch.txt
+*************************************************
+
+
 
