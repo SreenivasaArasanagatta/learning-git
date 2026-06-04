@@ -9,5 +9,43 @@ git <command> -h
 
 git clone -h
 git remote -h
+******************
+learning-git % echo Hello > test.txt
+learning-git % git add .  # add all the file changes to the staging ares
+learning-git % git commit -m "Initial commit"  # allows us to crrate a commit
+[main 0e7e33a] Initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test.txt
+learning-git % git log # gives overview of commands
+**********************
+git add <filenames> #adds one or more files to the staging
+git reset <filenames> # removes one or more files from the staging
+git status # prints repository status
+
+arasans@ADSKLYY0JW6Q42 learning-git % git branch # displays available branches
+* main
+arasans@ADSKLYY0JW6Q42 learning-git % git branch featurebranch  # creates new branch
+arasans@ADSKLYY0JW6Q42 learning-git % git branch
+  featurebranch
+* main
+arasans@ADSKLYY0JW6Q42 learning-git % git checkout featurebranch  # switches to different branch
+Switched to branch 'featurebranch'
+arasans@ADSKLYY0JW6Q42 learning-git % git branch
+* featurebranch
+  main
+arasans@ADSKLYY0JW6Q42 learning-git % echo feature branch > newfeaturebranch.txt
+arasans@ADSKLYY0JW6Q42 learning-git % git add .
+arasans@ADSKLYY0JW6Q42 learning-git % git commit -m "feature branch commit"
+[featurebranch 3b169e4] feature branch commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 newfeaturebranch.txt
+arasans@ADSKLYY0JW6Q42 learning-git % 
+
+*******************************************
+arasans@ADSKLYY0JW6Q42 learning-git % git show 3b169e403605911adec3c32be7f6a5c40a96bb1e  # gives extensive commit info
+
+arasans@ADSKLYY0JW6Q42 learning-git % git show --name-only 3b169e403605911adec3c32be7f6a5c40a96bb1e  #gives shorthand commit info
+
+arasans@ADSKLYY0JW6Q42 learning-git % git reflog   #gives info about all commits on all branches
 
 
