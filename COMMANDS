@@ -41,7 +41,54 @@ Changes to be committed:
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
 	unstagedfile.txt
+
+#Adds one or more files to staging
+git add <filenames>
+
+#removes one or more files from the staging
+%git reset <filenames>
+
 **********************
+#BRANCHES
+# A branch is simply a series of commits that can be manipulated independently.
+# Git maintains a master branch that is in some sense the source of truth for the project, meaning it is the code that is currently the most upto date.
+# ANy commit on a branch can be the origin commit where a new branch can be initiated at that point.
+
+#The command Git branch displays a list of all avaialble branches in your project
+% git branch
+
+# to create a new feature branch
+% git branch featurebranch
+ % git branch              
+  featurebranch
+* main
+
+
+% echo master branch > newFileMaster.txt
+% git add .
+% git commit -m "Master branch commit"
+[main ff43c9d] Master branch commit
+ 3 files changed, 3 insertions(+)
+ create mode 100644 newFileMaster.txt
+ create mode 100644 stagedfile.txt
+ create mode 100644 unstagedfile.txt
+arasans@ADSKLYY0JW6Q42 test % 
+
+#command to  CHANGE the BRANCH is git CHECKOUT
+% git checkout featurebranch
+Switched to branch 'featurebranch'
+ % echo feature branch > newfileFeatureBranch.txt
+% git add .
+ % git commit -m "Feature branch commit"
+[featurebranch 7b2a4df] Feature branch commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 newfileFeatureBranch.txt
+arasans@ADSKLYY0JW6Q42 test % 
+
+git branch # displays available branches
+git branch <branch name> #creates a new branch
+git checkout <branch name> # switches to a different branch
+
 
 
 
