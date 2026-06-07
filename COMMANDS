@@ -1,3 +1,18 @@
+#LOGIN
+test % gh auth login
+? Where do you use GitHub? GitHub.com
+? What is your preferred protocol for Git operations on this host? HTTPS
+? Authenticate Git with your GitHub credentials? Yes
+? How would you like to authenticate GitHub CLI? Login with a web browser
+
+! First copy your one-time code: xxxx-yyyy
+Press Enter to open https://github.com/login/device in your browser... 
+✓ Authentication complete.
+- gh config set -h github.com git_protocol https
+✓ Configured git protocol
+✓ Logged in as SreenivasaArasanagatta
+*************************************
+
 #creates a local project based on the link provided
 %git clone https://github.com/SreenivasaArasanagatta/test.git 
 
@@ -88,6 +103,21 @@ arasans@ADSKLYY0JW6Q42 test %
 git branch # displays available branches
 git branch <branch name> #creates a new branch
 git checkout <branch name> # switches to a different branch
+*******************************
+# Checking status and inspecting commits
+git show <hash>  # gives extensive commit info
+
+git reflog # gives info about all commits on all branches
+********************************
+
+#PUSH send files from local repository to the remote repository
+# PULL retrieve from remote to the local repository
+
+
+
+
+
+
 
 
 
