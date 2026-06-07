@@ -12,6 +12,10 @@ Press Enter to open https://github.com/login/device in your browser...
 ✓ Configured git protocol
 ✓ Logged in as SreenivasaArasanagatta
 *************************************
+#Pull the latest changes:bash
+git pull origin main
+
+**********************************
 
 #creates a local project based on the link provided
 %git clone https://github.com/SreenivasaArasanagatta/test.git 
