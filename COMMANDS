@@ -240,6 +240,22 @@ arasans@ADSKLYY0JW6Q42 test %
 
 
 *******************************
+git rebase # Takes the diff from the original branch and applies to the current branch
+
+git init
+
+git remote add
+
+git diff source and dest
+
+git tag
+
+git stash
+
+git stash pop
+git rebase
+
+*************************************
 
 
 
