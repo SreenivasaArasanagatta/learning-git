@@ -162,6 +162,86 @@ arasans@ADSKLYY0JW6Q42 test %
 
 ****************************************
 
+git revert # creates a new commit to undo changes
+
+git reset -- soft # removes commits from history keeps chaanges
+
+git reset --hard # removes commits from history removes changes
+
+*******************************************
+#MERGE BRANCHES 
+test % git merge featurebranch
+***************************************
+# Pull requests and code reviews
+# Pull requests are basically a request to merge a branch into another branch
+
+#Push from main
+ % git branch
+  featurebranch
+* main
+ % git push -f
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 14 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 542 bytes | 542.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/SreenivasaArasanagatta/test.git
+   c63fcc9..c6f00c0  main -> main
+arasans@ADSKLYY0JW6Q42 test % 
+
+
+#now let's switch over to feature branch and do the same over
+arasans@ADSKLYY0JW6Q42 test % git branch
+  featurebranch
+* main
+arasans@ADSKLYY0JW6Q42 test % git checkout featurebranch
+Switched to branch 'featurebranch'
+arasans@ADSKLYY0JW6Q42 test % git branch
+* featurebranch
+  main
+arasans@ADSKLYY0JW6Q42 test % 
+
+## Since the featurebranch is local only, we need to tell git where to push the new branch
+arasans@ADSKLYY0JW6Q42 test % git push -u origin featurebranch
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create a pull request for 'featurebranch' on GitHub by visiting:
+remote:      https://github.com/SreenivasaArasanagatta/test/pull/new/featurebranch
+remote: 
+To https://github.com/SreenivasaArasanagatta/test.git
+ * [new branch]      featurebranch -> featurebranch
+branch 'featurebranch' set up to track 'origin/featurebranch'.
+arasans@ADSKLYY0JW6Q42 test % 
+
+
+##Since we already merged dekta is 0, let's create a new file
+arasans@ADSKLYY0JW6Q42 test % echo new commit PR > pullrequest.txt
+arasans@ADSKLYY0JW6Q42 test % git add .
+arasans@ADSKLYY0JW6Q42 test % git commit -m " new PR"
+[featurebranch d7db4f2]  new PR
+ 1 file changed, 1 insertion(+)
+ create mode 100644 pullrequest.txt
+arasans@ADSKLYY0JW6Q42 test % git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 14 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 298 bytes | 298.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/SreenivasaArasanagatta/test.git
+   7b2a4df..d7db4f2  featurebranch -> featurebranch
+arasans@ADSKLYY0JW6Q42 test % 
+
+
+##### Go to github and click the new branch -> CLICK NEW PULL REQUEST, add comment and MERGE
+
+
+*******************************
+
+
 
 
 
