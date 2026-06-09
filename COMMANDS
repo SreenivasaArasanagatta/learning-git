@@ -15,6 +15,8 @@ Press Enter to open https://github.com/login/device in your browser...
 login using token
 
 git clone https://<UID>:<TOKEN>@git.xxx.com/ADP/yyy.git
+
+git remote -v
 *************************************
 #Pull the latest changes:bash
 git pull origin main
