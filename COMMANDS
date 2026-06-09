@@ -12,6 +12,10 @@ Press Enter to open https://github.com/login/device in your browser...
 ✓ Configured git protocol
 ✓ Logged in as SreenivasaArasanagatta
 *************************************
+login using token
+
+git clone https://<UID>:<TOKEN>@git.xxx.com/ADP/yyy.git
+*************************************
 #Pull the latest changes:bash
 git pull origin main
 
