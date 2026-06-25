@@ -268,7 +268,115 @@ git rebase
 *************************************
 
 
+Create a feature branch
+git checkout main
+git pull
+git switch -c feature/my-new-feature
+# make changes
+git add .
+git commit -m "feat: add pagination"
+git push -u origin feature/my-new-feature
 
+
+Get previous works code from main
+Step 1: Find the good commit
+git log --oneline
+Step 2: Reset your local main
+git reset --hard <good-commit>
+Do NOT run git push unless you intend to rewrite remote history.
+
+
+Get a remote feature branch's code
+git fetch origin
+a) If You Already Have the Branch Locally
+git switch feature/XXX
+git pull origin feature/XXX
+b) If You DO NOT Have the Branch Locally
+git switch -c feature/XXX origin/feature/XXX
+How to commit to this branch
+git add YYY
+git commit -m "ZZZ"
+git push
+
+Get a remote branch's code
+git fetch origin
+git switch --track origin/XXX
+
+Push code to a remote feature branch
+git push -u origin feature/XXX
+
+Solve conflict in IDE
+git merge main
+
+Revert all committed changes
+git restore --staged .
+
+Revert all uncommitted changes
+git restore .
+
+Discard all untracked files, cautious to use this
+git clean -fd
+# for a folder
+git clean -fd tyto-electron/coverage/
+
+After git add, check the diff
+git diff --staged
+
+Pull main/other branch has conflict and abort
+git stash
+git pull origin tyto-next
+git stash pop  # or apply
+
+Temporarily stash just one file, commit everything else, then restore it
+# Stash only this file
+git stash push yarn.lock
+
+# Commit everything else
+git add .
+git commit -m "your commit message"
+
+# Bring this file back
+git stash pop
+
+Temporarily stash all not added files, pull from main, then restore them
+# Stash tracked + untracked files
+git stash push -u -m "WIP before pulling main"
+
+# Update your local main
+git fetch origin
+
+# Merge/rebase main into your branch
+git pull origin main
+# or, if your team prefers rebasing:
+# git rebase origin/main
+
+# Reapply your stashed changes
+git stash pop
+
+Compare a feature branch with main
+git diff main
+# check only changed file names
+git diff --name-only main...feature-branch
+# check file change
+git diff main -- path/to/file
+
+Rebase
+git pull --rebase origin BRANCH_NAME
+
+
+
+Tag
+# create the tag
+git tag v0.0.17-alpha
+
+# push the tag
+git push origin v0.0.17-alpha
+
+# delete the local tag
+git tag -d 0.0.17-alpha
+
+# delete the remote tag
+git push origin :refs/tags/0.0.17-alpha
 
 
 
