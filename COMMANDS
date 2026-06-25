@@ -1,3 +1,33 @@
+
+*************************************************
+LOCAL LOGIN
+% gh auth login
+? Where do you use GitHub? Other
+? Hostname: git.auto.com
+? What is your preferred protocol for Git operations on this host? HTTPS
+? Authenticate Git with your GitHub credentials? Yes
+? How would you like to authenticate GitHub CLI? Paste an authentication token
+Tip: you can generate a Personal Access Token here https://git.yyyy.com/settings/tokens
+The minimum required scopes are 'repo', 'read:org', 'workflow'.
+? Paste your authentication token: *******************
+- gh config set -h git.autodesk.com git_protocol https
+✓ Configured git protocol
+✓ Logged in as arasans
+--
+
+% git config user.name --local  
+% git config user.name "arasans"
+% git config user.name          
+arasans
+% git config user.email
+sreenivas.xxxx@gmail.com
+% git config user.email "sree.arasanagatta@aut.com"
+% git config user.email                                 
+sree.arasanagatta@auto.com
+
+
+
+*******************************
 #LOGIN
 test % gh auth login
 ? Where do you use GitHub? GitHub.com
